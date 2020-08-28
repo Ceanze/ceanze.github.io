@@ -7,31 +7,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700&display=swap" rel="stylesheet">
 </head>
 <body class="hide-scroll">
-	<div class="grid">
-		<h1>SIMON NYLÉN</h1>
-		<div class="button noselect" id="about">About</div>
-		<div class="button noselect" id="projects">Projects</div>
-		<div class="button noselect" id="cv">CV</div>
-	</div>
+	<!-- Middle boxes -->
+	<div class="left-bar"></div>
+	<div class="right-bar"></div>
 
-	<div class="about-page" id ="about-page">
-		<div class="page-title">ABOUT</div>
-		<div class="about-text">
-			Hello, I'm Simon Nylén! I am a student in Master of Science in Game and Software Engineering currently studying my 4th year at Blekinge Tekniska Högskola (BTH)
-		</div>
-		<div class="about-content">
-			I have experience of the following programming languages in decending order of use and experience:
-			<ul>
-				<li>C++</li>
-				<li>Python</li>
-				<li>C</li>
-				<li>JavaScript</li>
-				<li>Lua</li>
-				<li>C#</li>
-				<li>HTML + CSS</li>
-				<li>Probably more in the future</li>
-			</ul>
-		</div>
+	<!-- Upper text -->
+	<div id="nav">
+		<ul id="nav-items">
+			<li onclick="homeClick(this)" class="active">Home</li>
+			<li onclick="aboutClick(this)">About</li>
+			<li onclick="projectsClick(this)">Projects</li>
+			<li onclick="cvClick(this)">CV</li>
+			<li onclick="contactClick(this)">Contact</li>
+		</ul>
 	</div>
 
 <script type="text/javascript" src="script.js"></script>
