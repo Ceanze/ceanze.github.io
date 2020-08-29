@@ -69,7 +69,7 @@ body {
 /* Center bars */
 .left-bar {
 	/* Position */
-	position: absolute;
+	position: fixed;
 	left: 52%;
 	top: 50%;
 
@@ -83,13 +83,37 @@ body {
 	transition-duration: 0.5s;
 }
 
-.left-bar.active {
+.left-bar.default {
+	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
+}
+
+.left-bar.about {
+	transform: rotate(0deg);
+	left: 30%;
+	top: 0%;
+	width: 70%;
+	height: 100vh;
+}
+
+.left-bar.projects {
+	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
+}
+
+.left-bar.cv {
+	transform: rotate(0deg);
+	width: 100%;
+	height: 70vh;
+	left: 0;
+	top: 30vh;
+}
+
+.left-bar.contact {
 	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
 }
 
 .right-bar {
 	/* Position */
-	position: absolute;
+	position: fixed;
 	left: 48%;
 	top: 50%;
 
@@ -103,8 +127,32 @@ body {
 	transition-duration: 0.5s;
 }
 
-.right-bar.active {
+.right-bar.default {
 	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
+}
+
+.right-bar.about {
+	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
+}
+
+.right-bar.projects {
+	transform: rotate(0deg);
+	left: 30%;
+	top: 0%;
+	width: 70%;
+	height: 100vh;
+}
+
+.right-bar.cv {
+	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
+}
+
+.right-bar.contact {
+	transform: rotate(0deg);
+	width: 100%;
+	height: 70vh;
+	left: 0;
+	top: 30vh;
 }
 
 /* Nav box */
@@ -125,4 +173,87 @@ body {
 
 #nav ul li.active {
 	color: var(--pink-3d);
+}
+
+/* Content */
+h1 {
+	font-size: 3em;
+}
+
+.aboutContent {
+	color: #f1f1f1;
+	position: absolute;
+	left: 30%;
+	width: 70%;
+	padding: 2%;
+	opacity: 0;
+
+	transition-delay: 0.0s;
+	transition-duration: 0.0s;
+	transition-timing-function: ease-out;
+}
+
+.aboutContent.visible {
+	opacity: 1;
+	transition-delay: 0.4s;
+	transition-duration: 0.1s;
+}
+
+.projectsContent {
+	color: var(--background-color);
+	position: absolute;
+	left: 30%;
+	width: 70%;
+	padding: 2%;
+	opacity: 0;
+
+	transition-delay: 0.0s;
+	transition-duration: 0.0s;
+	transition-timing-function: ease-out;
+}
+
+.projectsContent.visible {
+	opacity: 1;
+	transition-delay: 0.4s;
+	transition-duration: 0.1s;
+}
+
+.cvContent {
+	color: #f1f1f1;
+	position: absolute;
+	left: 0%;
+	width: 100%;
+	top: 30vh;
+	padding: 2%;
+	opacity: 0;
+
+	transition-delay: 0.0s;
+	transition-duration: 0.0s;
+	transition-timing-function: ease-out;
+}
+
+.cvContent.visible {
+	opacity: 1;
+	transition-delay: 0.4s;
+	transition-duration: 0.1s;
+}
+
+.contactContent {
+	color: var(--background-color);
+	position: absolute;
+	left: 0%;
+	width: 100%;
+	top: 30vh;
+	padding: 2%;
+	opacity: 0;
+
+	transition-delay: 0.0s;
+	transition-duration: 0.0s;
+	transition-timing-function: ease-out;
+}
+
+.contactContent.visible {
+	opacity: 1;
+	transition-delay: 0.4s;
+	transition-duration: 0.1s;
 }

@@ -1,28 +1,46 @@
-function animateOut() {
-    let left = document.getElementsByClassName("left-bar")[0];
-    let right = document.getElementsByClassName("right-bar")[0];
-    
-    if (!left.classList.contains("active")) {
-        left.classList.add("active")
-        right.classList.add("active")
+var activeAnimation = "default";
+
+function setContent(oldContent, newContent) {
+    // Remove visibility for old content
+    if (oldContent != null && oldContent != "default") {
+        let prevContent = document.getElementsByClassName(oldContent + "Content")[0];
+        if (prevContent.classList.contains("visible")) {
+            prevContent.classList.remove("visible");
+        }
+    }
+
+    // Add visibility to new content
+    if (newContent != null && newContent != "default") {
+        let content = document.getElementsByClassName(newContent + "Content")[0];
+        content.classList.add("visible");
     }
 }
 
-function animateIn() {
+function setAnimation(newAnimation) {
     let left = document.getElementsByClassName("left-bar")[0];
     let right = document.getElementsByClassName("right-bar")[0];
-    
-    left.classList.remove("active");
-    right.classList.remove("active");
-}
 
-function toggleBars() {
-    let left = document.getElementsByClassName("left-bar")[0];
-    if (left.classList.contains("active")) {
-        animateIn();
-    } else {
-        animateOut();
-    };
+    setContent(activeAnimation, newAnimation);
+    
+    // Remove previous active if it exist
+    if (activeAnimation != null) {
+        if (left.classList.contains(activeAnimation)) {
+            left.classList.remove(activeAnimation)
+        }
+        if (right.classList.contains(activeAnimation)) {
+            right.classList.remove(activeAnimation)
+        }
+    }
+
+    // Add new animation if a new animation is requested
+    if (newAnimation != null) {
+        left.classList.add(newAnimation);
+        right.classList.add(newAnimation);
+    }
+
+
+    // Set active animation to new animation
+    activeAnimation = newAnimation;
 }
 
 function setActive(newActive) {
@@ -36,32 +54,34 @@ function setActive(newActive) {
 }
 
 function homeClick(id) {
-    animateIn()
+    setAnimation(null)
     setActive(id)
 }
 
 function aboutClick(id) {
-    animateOut()
+    setAnimation("about")
     setActive(id)
 }
 
 function  projectsClick(id) {
-    animateOut()
+    setAnimation("projects")
     setActive(id)
 }
 
 function cvClick(id) {
-    animateOut()
+    setAnimation("cv")
     setActive(id)
 }
 
 function contactClick(id) {
-    animateOut()
+    setAnimation("contact")
     setActive(id)
 }
 
 /* MAIN */
 function main() {
-    
+    window.onload = function() {
+        this.setAnimation(null)
+    }
 }
 main();
