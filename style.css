@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/**
+	There are two version of the website, one widescreen and one tallscreen.
+	It should transistion to the tallscreen one probably when height > width
+**/
+
 /** GENERAL **/
 
 :root {
@@ -25,6 +30,12 @@ body {
 	background-color: var(--background-color);
 	color: white;
 	font-family: 'Montserrat', sans-serif;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 1px 1px;
+	grid-template-areas: "navigation navigation content content";
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -45,7 +56,50 @@ body {
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome and Opera */
-  }
+}
+
+.divider {
+	position: absolute;
+	border-left: 1px solid white;
+	left: 50%;
+	top: 5vh;
+	height: 90vh;
+	z-index: 10;
+}
+
+.title {
+	padding-top: 15vh;
+	padding-left: 10vh;
+}
+
+.title p {
+	margin-top: 0;
+	line-height: 1em;
+	font-size: 6em;
+	font-weight: 400;
+}
+
+.navigation {
+	grid-area: navigation;
+}
+
+#active-content {
+	grid-area: content;
+	padding-left: 10vh;
+}
+
+#active-content h1 {
+	padding-top: 15vh;
+	font-size: 2em;
+	font-weight: 400;
+	color: var(--accent-color);
+}
+
+.content
+{
+	display: none;
+	visibility: hidden;
+}
 
 
 /* @media only screen and (max-width: 1080px) {
@@ -66,99 +120,11 @@ body {
 	}
 } */
 
-/* Center bars */
-.left-bar {
-	/* Position */
-	position: fixed;
-	left: 52%;
-	top: 50%;
-
-	/* Style */
-	background-color: var(--pink-3d);
-	height: 500px;
-	width: 100px; /* Not dynamic... */
-	transform: translate(-50%, -75%) rotate(45deg);
-	transform-origin: left;
-
-	transition-duration: 0.5s;
-}
-
-.left-bar.default {
-	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
-}
-
-.left-bar.about {
-	transform: rotate(0deg);
-	left: 30%;
-	top: 0%;
-	width: 70%;
-	height: 100vh;
-}
-
-.left-bar.projects {
-	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
-}
-
-.left-bar.cv {
-	transform: rotate(0deg);
-	width: 100%;
-	height: 70vh;
-	left: 0;
-	top: 30vh;
-}
-
-.left-bar.contact {
-	transform: translate(-50%, -75%) rotate(45deg) translate(0, -100vh);
-}
-
-.right-bar {
-	/* Position */
-	position: fixed;
-	left: 48%;
-	top: 50%;
-
-	/* Style */
-	background-color: var(--blue-3d);
-	height: 500px;
-	width: 100px; /* Not dynamic... */
-	transform: translate(-50%, -25%) rotate(45deg);
-	transform-origin: left;
-
-	transition-duration: 0.5s;
-}
-
-.right-bar.default {
-	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
-}
-
-.right-bar.about {
-	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
-}
-
-.right-bar.projects {
-	transform: rotate(0deg);
-	left: 30%;
-	top: 0%;
-	width: 70%;
-	height: 100vh;
-}
-
-.right-bar.cv {
-	transform: translate(-50%, -25%) rotate(45deg) translate(0, 100vh);
-}
-
-.right-bar.contact {
-	transform: rotate(0deg);
-	width: 100%;
-	height: 70vh;
-	left: 0;
-	top: 30vh;
-}
-
 /* Nav box */
 #nav {
 	float: left;
 	padding: 5vh;
+	font-size: 2em;
 }
 
 #nav ul {
@@ -172,14 +138,10 @@ body {
 }
 
 #nav ul li.active {
-	color: var(--pink-3d);
+	color: var(--accent-color);
 }
 
 /* Content */
-h1 {
-	font-size: 3em;
-}
-
 .aboutContent {
 	color: #f1f1f1;
 	position: absolute;

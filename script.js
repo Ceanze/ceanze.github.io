@@ -43,7 +43,7 @@ function setAnimation(newAnimation) {
     activeAnimation = newAnimation;
 }
 
-function setActive(newActive) {
+function setActive(newActive, index) {
     let items = document.getElementById("nav-items").getElementsByTagName("li");
     for (let item = 0; item < items.length; item++) {
         if (items[item].classList.contains("active")) {
@@ -51,31 +51,10 @@ function setActive(newActive) {
         };
     };
     newActive.classList.add("active");
-}
-
-function homeClick(id) {
-    setAnimation(null)
-    setActive(id)
-}
-
-function aboutClick(id) {
-    setAnimation("about")
-    setActive(id)
-}
-
-function  projectsClick(id) {
-    setAnimation("projects")
-    setActive(id)
-}
-
-function cvClick(id) {
-    setAnimation("cv")
-    setActive(id)
-}
-
-function contactClick(id) {
-    setAnimation("contact")
-    setActive(id)
+    
+    let active = document.getElementById("active-content")
+    let contents = document.getElementsByClassName("content")
+    active.innerHTML = contents[index].innerHTML
 }
 
 /* MAIN */

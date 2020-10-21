@@ -7,36 +7,46 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,700&display=swap" rel="stylesheet">
 </head>
 <body class="hide-scroll">
-	<!-- Middle boxes -->
-	<div class="left-bar default"></div>
-	<div class="right-bar default"></div>
 
-	<!-- Upper text -->
-	<div id="nav">
-		<ul id="nav-items">
-			<li onclick="homeClick(this)" class="active">Home</li>
-			<li onclick="aboutClick(this)">About</li>
-			<li onclick="projectsClick(this)">Projects</li>
-			<li onclick="cvClick(this)">CV</li>
-			<li onclick="contactClick(this)">Contact</li>
-		</ul>
+	<!-- Divider -->
+	<div class="divider"></div>
+
+	<!-- Left side -->
+	<div class="navigation">
+		<div class="title">
+			<p>Hello! I'm <br> <span style="color: #e40070">Simon Nylén</span></p>
+		</div>
+		<div id="nav">
+			<ul id="nav-items">
+				<li onclick="setActive(this, 0)">About</li>
+				<li onclick="setActive(this, 1)">Projects</li>
+				<li onclick="setActive(this, 2)">CV</li>
+				<li onclick="setActive(this, 3)">Contact</li>
+			</ul>
+		</div>
 	</div>
 
-	<div class="aboutContent">
-		<h1>I'm Simon Nylén</h1>
-		Lorem ipsum dolar sit amet is a cool dolar sit amet which lorems when ipsum does.
+	<!-- Right side -->
+	<div id="active-content"></div>
+
+	<!-- About -->
+	<div class="content">
+		<h1>About</h1>
+		I am a cool boy :cool:
 	</div>
 
-	<div class="projectsContent">
-		<h1>Some of the Projects I've Worked On</h1>
-		--github link--
+	<!-- Projects -->
+	<div class="content">
+		<h1>Projects</h1>
 	</div>
 
-	<div class="cvContent">
-		<h1>Curriculum Vitae (or something)</h1>
+	<!-- CV -->
+	<div class="content">
+		<h1>Curriculum Vitae</h1>
 	</div>
 
-	<div class="contactContent">
+	<!-- Contact -->
+	<div class="content">
 		<h1>Contact Information</h1>
 	</div>
 
