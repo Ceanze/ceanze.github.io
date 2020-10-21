@@ -51,7 +51,7 @@ function setActive(newActive, index) {
         };
     };
     newActive.classList.add("active");
-    
+
     let active = document.getElementById("active-content")
     let contents = document.getElementsByClassName("content")
     active.innerHTML = contents[index].innerHTML
@@ -62,5 +62,7 @@ function main() {
     window.onload = function() {
         this.setAnimation(null)
     }
+
+    setActive(document.getElementById("nav-items").children[1], 1);
 }
 main();

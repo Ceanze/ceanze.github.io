@@ -101,6 +101,61 @@ body {
 	visibility: hidden;
 }
 
+.card-list
+{
+	width: 80%;
+	height: 70vh;
+	overflow: hidden;
+	overflow-y: scroll;
+	/* background-color: var(--pink-3d); */
+}
+
+.card
+{
+	background: rgb(255,109,124);
+	background: linear-gradient(170deg, rgba(255,109,124,0.05) 0%, rgba(179,122,255,0.05) 100%);
+	border-radius: 15px;
+	height: 20vh;
+	margin-bottom: 2vh;
+	padding-right: 1em;
+	min-width: 400px;
+	cursor: pointer;
+	color: white;
+	text-decoration-line: none;
+
+	display: grid;
+	grid-template-columns: 15em 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.card:hover
+{
+	background: linear-gradient(170deg, rgba(255,109,124,0.2) 0%, rgba(179,122,255,0.2) 100%);
+}
+
+.card img
+{
+	grid-area: 1 / 1 / 2 / 2;
+	padding: 2vh;
+	height: 16vh;
+	place-self: center;
+	justify-self: center;
+	align-self: center;
+}
+
+.card-content
+{
+	grid-area: 1 / 2 / 2 / 6;
+	line-height: 1.5em;
+}
+
+.card h2
+{
+	font-weight: 700;
+}
+
 
 /* @media only screen and (max-width: 1080px) {
 	.about-text {
@@ -139,83 +194,4 @@ body {
 
 #nav ul li.active {
 	color: var(--accent-color);
-}
-
-/* Content */
-.aboutContent {
-	color: #f1f1f1;
-	position: absolute;
-	left: 30%;
-	width: 70%;
-	padding: 2%;
-	opacity: 0;
-
-	transition-delay: 0.0s;
-	transition-duration: 0.0s;
-	transition-timing-function: ease-out;
-}
-
-.aboutContent.visible {
-	opacity: 1;
-	transition-delay: 0.4s;
-	transition-duration: 0.1s;
-}
-
-.projectsContent {
-	color: var(--background-color);
-	position: absolute;
-	left: 30%;
-	width: 70%;
-	padding: 2%;
-	opacity: 0;
-
-	transition-delay: 0.0s;
-	transition-duration: 0.0s;
-	transition-timing-function: ease-out;
-}
-
-.projectsContent.visible {
-	opacity: 1;
-	transition-delay: 0.4s;
-	transition-duration: 0.1s;
-}
-
-.cvContent {
-	color: #f1f1f1;
-	position: absolute;
-	left: 0%;
-	width: 100%;
-	top: 30vh;
-	padding: 2%;
-	opacity: 0;
-
-	transition-delay: 0.0s;
-	transition-duration: 0.0s;
-	transition-timing-function: ease-out;
-}
-
-.cvContent.visible {
-	opacity: 1;
-	transition-delay: 0.4s;
-	transition-duration: 0.1s;
-}
-
-.contactContent {
-	color: var(--background-color);
-	position: absolute;
-	left: 0%;
-	width: 100%;
-	top: 30vh;
-	padding: 2%;
-	opacity: 0;
-
-	transition-delay: 0.0s;
-	transition-duration: 0.0s;
-	transition-timing-function: ease-out;
-}
-
-.contactContent.visible {
-	opacity: 1;
-	transition-delay: 0.4s;
-	transition-duration: 0.1s;
 }
