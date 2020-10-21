@@ -107,7 +107,6 @@ body {
 	height: 70vh;
 	overflow: hidden;
 	overflow-y: scroll;
-	/* background-color: var(--pink-3d); */
 }
 
 .card
@@ -149,11 +148,26 @@ body {
 {
 	grid-area: 1 / 2 / 2 / 6;
 	line-height: 1.5em;
+	position: relative;
 }
 
 .card h2
 {
 	font-weight: 700;
+}
+
+.card-tags
+{
+	position: absolute;
+	bottom: 0;
+	margin: 1em 0.5em 0.5em 0;
+}
+
+.card-tags span
+{
+	background-color: rgba(255,109,124,0.3);
+	border-radius: 0.3em;
+	padding: 0.1em 0.2em 0.1em 0.2em;
 }
 
 

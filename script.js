@@ -63,6 +63,6 @@ function main() {
         this.setAnimation(null)
     }
 
-    setActive(document.getElementById("nav-items").children[1], 1);
+    setActive(document.getElementById("nav-items").children[0], 0);
 }
 main();
