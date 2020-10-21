@@ -32,10 +32,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	gap: 1px 1px;
-	grid-template-areas: "navigation navigation content content";
+	grid-template-areas: "navigation content";
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -169,25 +169,6 @@ body {
 	border-radius: 0.3em;
 	padding: 0.1em 0.2em 0.1em 0.2em;
 }
-
-
-/* @media only screen and (max-width: 1080px) {
-	.about-text {
-		color: white;
-		font-weight: 400;
-		font-size: 2em;
-		margin: 5vh;
-		width: 80%;
-	}
-
-	.about-content {
-		color: white;
-		font-weight: 400;
-		font-size: 2em;
-		margin: 5vh;
-		width: 80%;
-	}
-} */
 
 /* Nav box */
 #nav {
