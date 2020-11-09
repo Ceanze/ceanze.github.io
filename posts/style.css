@@ -65,6 +65,7 @@ header a
 
 .content-grid
 {
+	background-color: var(--background-color);
 	padding-top: 2em;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
