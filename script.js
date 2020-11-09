@@ -14,6 +14,6 @@ function setActive(newActive, index) {
 
 /* MAIN */
 function main() {
-    setActive(document.getElementById("nav-items").children[4], 4);
+    setActive(document.getElementById("nav-items").children[1], 1);
 }
 main();
