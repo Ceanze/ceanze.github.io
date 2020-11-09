@@ -129,6 +129,15 @@ body {
 	grid-row-gap: 0px;
 }
 
+.card-no-image
+{
+	display: grid;
+	grid-template-columns: 1.5em;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
 .card:hover
 {
 	background: linear-gradient(170deg, rgba(255,109,124,0.2) 0%, rgba(179,122,255,0.2) 100%);

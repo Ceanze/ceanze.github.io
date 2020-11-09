@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Simon Nylén</title>
 	<meta charset="utf-8">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
 				<li onclick="setActive(this, 1)">Projects</li>
 				<li onclick="setActive(this, 2)">CV</li>
 				<li onclick="setActive(this, 3)">Contact</li>
+				<li onclick="setActive(this, 4)">Posts</li>
 			</ul>
 		</div>
 	</div>
@@ -84,6 +85,21 @@
 	<div class="content">
 		<h1>Contact Information</h1>
 		Text like this is still 'under construction'
+	</div>
+
+	<!-- Posts -->
+	<div class="content">
+		<h1>Posts</h1>
+		<div class="card-list hide-scroll">
+			<a class="card card-no-image" href="posts/convert-cmake-to-premake.html">
+				<!-- <img src="img/crazycanvas.png"> -->
+				<div class="card-content">
+					<h2>Converting CMake to Premake for GLSLang</h2>
+					A short post about the process of converting from CMake to premake using GLSLang as a practical example
+					<div class="card-tags"><span>Vulkan</span> <span>CMake</span> <span>premake</span> <span>GLSLang</span></div>
+				</div>
+			</a>
+		</div>
 	</div>
 
 <script type="text/javascript" src="script.js"></script>
