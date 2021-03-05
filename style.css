@@ -128,7 +128,8 @@ body {
 	background: rgb(255,109,124);
 	background: linear-gradient(170deg, rgba(255,109,124,0.05) 0%, rgba(179,122,255,0.05) 100%);
 	border-radius: 15px;
-	height: 20vh;
+	min-height: 12em;
+	/* height: 20vh; */
 	padding-right: 1em;
 	min-width: 400px;
 	cursor: pointer;
@@ -159,8 +160,8 @@ body {
 .card img
 {
 	grid-area: 1 / 1 / 2 / 2;
-	padding: 2vh;
-	height: 16vh;
+	/* padding: 2vh; */
+	height: 10em;
 	place-self: center;
 	justify-self: center;
 	align-self: center;
