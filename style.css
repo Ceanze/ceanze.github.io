@@ -38,6 +38,12 @@ body {
 	grid-template-areas: "navigation content"; */
 }
 
+@media only screen and (max-width: 600px) {
+	body {
+		width: 95%;
+	}
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scroll::-webkit-scrollbar {
 	display: none;
@@ -68,6 +74,7 @@ body {
 }
 
 .navigation {
+	padding-top: 10em;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
@@ -82,8 +89,8 @@ body {
 
 .title {
 	grid-area: title;
-	padding-top: 15vh;
-	padding-left: 10vh;
+	/* padding-top: 10em; */
+	/* padding-left: 10vh; */
 	font-family: 'Source Code Pro', monospace;
 }
 
@@ -97,7 +104,7 @@ body {
 
 #active-content {
 	grid-area: content;
-	padding-left: 10vh;
+	/* padding-left: 10vh; */
 }
 
 #active-content h1 {
@@ -196,7 +203,7 @@ body {
 /* Nav box */
 #nav {
 	float: left;
-	padding: 5vh;
+	/* padding: 5vh; */
 	font-size: 2em;
 }
 
