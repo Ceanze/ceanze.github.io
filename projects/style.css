@@ -36,6 +36,13 @@ a
 	grid-template-columns: 0.2fr 1fr 1fr;
 	padding: 0 10% 0 10%;
 	font-family: 'Montserrat', sans-serif;
+	transition-duration: 0.5s;
+}
+
+.active
+{
+	background-color: rgba(0, 0, 0, 0) !important;
+	backdrop-filter: none !important;
 }
 
 #nav-bar .links

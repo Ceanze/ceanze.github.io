@@ -32,17 +32,17 @@ function setupScrollTo() {
 
 /* MAIN */
 function main() {
-    // setNavBarTransparent();
+    setNavBarTransparent();
 
     setupScrollTo();
 
-    // window.addEventListener("scroll", function(){
-    //     if (window.scrollY < 50) {
-    //         setNavBarTransparent();
-    //     }
-    //     else {
-    //         setNavBarColor();
-    //     }
-    // });
+    window.addEventListener("scroll", function(){
+        if (window.scrollY < 50) {
+            setNavBarTransparent();
+        }
+        else {
+            setNavBarColor();
+        }
+    });
 }
 main();
