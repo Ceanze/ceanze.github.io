@@ -1,0 +1,182 @@
+:root {
+	--background-color: #080808;
+	--accent-color: #e40070;
+	--accent-color2: #ad005f;
+	--button-color: #e40070;
+	--pink-3d: #fa495a;
+	--blue-3d: #3cefc3;
+}
+
+.clip {
+	background-image: linear-gradient( 135deg, #43CBFF 0, #9708CC 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+body
+{
+	width: 100%;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+#nav-bar
+{
+	position: fixed;
+	width: 100%;
+	height: 6vh;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(6px);
+	display: grid;
+	grid-template-columns: 0.2fr 1fr 1fr;
+	padding: 0 10% 0 10%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#nav-bar .links
+{
+	justify-self: end;
+	padding-top: 1.5vh;
+}
+
+@media only screen and (max-width: 1280px) {
+	#nav-bar .links {
+		display: none;
+	}
+}
+
+#nav-bar a
+{
+	padding-top: 1.5vh;
+	font-size: 1.5em;
+	text-decoration: none;
+	color: var(--accent-color);
+	padding-left: 0.5em;
+}
+
+/* TOP HEADER */
+.top-header
+{
+	font-family: 'Source Code Pro', monospace;
+	position: relative;
+	width: 100%;
+	height: 70vh;
+}
+
+.top-header video
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	object-fit: cover;
+	z-index: 0;
+	opacity: 90%;
+}
+
+.top-header .title
+{
+	position: absolute;
+	top: 12vh;
+	left: 10%;
+	z-index: 1;
+	text-shadow: 4px 4px 15px #080808;
+}
+
+.title h1
+{
+	position: relative;
+	font-weight: 900;
+	font-size: 8em;
+	line-height: 1em;
+	margin-bottom: 0;
+	color: var(--accent-color);
+}
+
+.title h2
+{
+	position: relative;
+	font-weight: 600;
+	font-size: 3rem;
+	margin-top: 0;
+	width: 70%;
+}
+
+@media only screen and (max-width: 870px) {
+	.top-header .title {
+		top: 0;
+	}
+
+	.title h2 {
+		width: 100%;
+	}
+}
+
+/* INFO HEADER */
+.two-col-box
+{
+	position: relative;
+	height: 70vh;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	justify-items: center;
+	align-items: center;
+}
+
+.two-col-box .text-box
+{
+	width: 50%;
+}
+
+.text-box h1
+{
+	font-size: 4em;
+	color: var(--accent-color);
+	font-weight: 700;
+}
+
+.text-box h2
+{
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.3em;
+}
+
+.two-col-box img
+{
+	width: 80%;
+}
+
+.two-col-box ul
+{
+	position: relative;
+	font-size: 2em;
+	width: 50%;
+}
+
+.cover
+{
+	position: relative;
+	height: 70vh;
+	width: 100%;
+	overflow-y: hidden;
+	object-fit: cover;
+}
+
+.text-title
+{
+	position: relative;
+	color: var(--accent-color);
+	font-size: 4em;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}

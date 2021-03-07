@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon Nylén</title>
+	<meta charset="utf-8">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600;900&display=swap" rel="stylesheet">
+</head>
+<body class="hide-scroll">
+
+<!-- Nav bar -->
+<div id="nav-bar">
+	<a href="../index.html">Back</a>
+	<div class="links">
+		<a href="#top">Top</a>
+		<a href="#contrib">My contributions</a>
+		<a href="#features">Techniques</a>
+		<a href="#devs">Developers</a>
+	</div>
+	<a href="https://github.com/IbexOmega/CrazyCanvas">Github</a>
+</div>
+
+<!-- Top header -->
+<div class="top-header" id="top">
+	<video autoplay muted loop>
+		<source src="../img/crazycanvas_Trim.mp4" type="video/mp4">
+	</video>
+	<div class="title">
+		<h1>CRAZY CANVAS</h1>
+		<h2>A game project made during one semester</h2>
+	</div>
+</div>
+
+<!-- Info header -->
+<div class="two-col-box">
+	<div class="text-box">
+		<h1>BIG GAME PROJECT</h1>
+		<h2>Crazy Canvas is a game that was created by me and nine other
+			students during the course "Big Game Project" at BTH.
+			<br>Crazy Canvas is a Capture the Flag First Person Shooter with a
+			twist, all enemies are invisible. The players are all equipped with
+			paint shooting guns which can color everything in the world and the
+			enemy players. By watching reflective surfaces like mirrors you
+			can see your opponents and take the shot. When an enemy is covered
+			in enough paint they die.
+		</h2>
+	</div>
+	<img src="../img/crazycanvas.png">
+</div>
+
+<!-- My techniques -->
+<h1 class="text-title" id="contrib">MY CONTRIBUTIONS</h1>
+
+<div class ="two-col-box">
+	<div class="text-box">
+		<h1>VERTEX PAINTING</h1>
+		<h2>The main game mechanic of Crazy Canvas is the painting of meshes
+			using their vertices. This was one of the primary things that I worked
+			on during the project. The technique uses the vertex shader to mark vertices
+			that have been hit to then afterwards paint them in the fragment shader.
+		</h2>
+	</div>
+	<img src="../img/crazyCanvasMeshPaintingShowcase.png">
+</div>
+
+<div class ="two-col-box">
+	<img src="../img/crazyCanvasMenu.png">
+	<div class="text-box">
+		<h1>GUI</h1>
+		<h2>The game used the GUI library of NoesisGUI which can create graphically
+			impressive and functional GUI. I designed and implemented the majority
+			of the GUI in game and also designed the logo that it uses.
+		</h2>
+	</div>
+</div>
+
+<div class ="two-col-box">
+	<div class="text-box">
+		<h1>DEBUG TOOLS</h1>
+		<h2>Getting data from the game during development is a crucial part of the
+			dev cycle, therefore both a special line renderer and profiler were implemented.
+			Both of these allowed the programmer to get help and information from the
+			game. The profiler allowed for both CPU and GPU times to be measured and compared.
+		</h2>
+	</div>
+</div>
+
+<img src="../img/crazyCanvasMirror.png" class="cover">
+
+<!-- All the techniques -->
+<h1 class="text-title" id="features">ALL FEATURES</h1>
+
+<div class="two-col-box">
+	<ul>
+		<li>Vertex Painting</li>
+		<li>Multiplayer</li>
+		<li>Ray-Tracing</li>
+		<li>PBR Shading</li>
+		<li>Skeletal Animation</li>
+		<li>Anti-Aliasing</li>
+		<li>Mesh Shaders</li>
+	</ul>
+	<ul>
+		<li>Particles</li>
+		<li>Marching Cubes</li>
+		<li>Physics</li>
+		<li>Sound</li>
+		<li>GUI</li>
+		<li>ECS</li>
+		<li>BHOP</li>
+	</ul>
+</div>
+
+
+<!-- All devs -->
+<h1 class="text-title" id="devs">ALL DEVELOPERS</h1>
+
+<div class="two-col-box">
+	<ul>
+		<li>Christoffer Andersson</li>
+		<li>Henry Bergström</li>
+		<li>Daniel Cheh</li>
+		<li>Alexander Dahlin</li>
+		<li>Herman Hansson Söderlund</li>
+	</ul>
+	<ul>
+		<li>Theo Holmqvist Berlin</li>
+		<li>Adrian Nordin</li>
+		<li>Simon Nylén</li>
+		<li>Tim Mellander</li>
+		<li>Jonathan Åleskog</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
