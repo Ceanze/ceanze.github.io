@@ -35,12 +35,13 @@ function setupScrollTo() {
     let elem = document.getElementById("nav-bar");
     for (let i = 0; i < elem.children.length; i++) {
         let a = elem.children[i];
-        let path = a.attributes.getNamedItem("href").value.replace('#', '');
-        a.addEventListener("click", function(){
-            scrollTo(path);
-        });
-        a.attributes.removeNamedItem("href");
-
+        if (a.attributes.getNamedItem("href").value.startsWith("#")) {
+            let path = a.attributes.getNamedItem("href").value.replace('#', '');
+            a.addEventListener("click", function(){
+                scrollTo(path);
+            });
+            a.attributes.removeNamedItem("href");
+        }
     }
 }
 

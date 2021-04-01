@@ -127,7 +127,7 @@ section {
 	padding-bottom: 15vh;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	column-gap: 4rem;
 }
 
@@ -161,6 +161,19 @@ section .col2 {
 
 section .col-both {
 	grid-column: 1 / span 2;
+}
+
+section .col-center {
+	grid-column: 1 / span 2;
+	justify-self: center;
+}
+
+section .col-justify-center {
+	justify-self: center;;
+}
+
+section img {
+	width: 100%;
 }
 
 .list {
@@ -220,6 +233,7 @@ section .col-both {
 {
 	grid-area: 1 / 1 / 2 / 2;
 	height: 10em;
+	width: initial;
 	place-self: center;
 	justify-self: center;
 	align-self: center;
