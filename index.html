@@ -9,47 +9,70 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
 </head>
 <body class="hide-scroll">
-	<!-- Title and navigation -->
-	<div class="navigation">
-		<div class="title">
-			<p>HELLO! I AM <br> <span style="color: #e40070">SIMON NYLÉN</span></p>
+
+	<!-- NAV BAR -->
+	<div id="nav-bar">
+		<a href="#about">About</a>
+		<a href="#experience">Experience</a>
+		<a href="#projects">Projects</a>
+		<!-- <a href="#resume">Résumé</a> -->
+		<a href="#contact">Contact</a>
+	</div>
+
+	<!-- COVER -->
+	<div class="cover">
+		<!-- <canvas></canvas> -->
+		<!-- <div class="cover-bottom-fade"></div> -->
+		<div class="cover-text-box">
+			<div class="cover-text clip">SIMON NYLÉN</div>
+			<div class="cover-sub-text">Game and Software Programmer</div>
 		</div>
-		<div id="nav">
-			<ul id="nav-items">
-				<li onclick="setActive(this, 0)">About</li>
-				<li onclick="setActive(this, 1)">Projects</li>
-				<li onclick="setActive(this, 2)">Résumé</li>
-				<li onclick="setActive(this, 3)">Contact</li>
-				<!-- <li onclick="setActive(this, 4)">Posts</li> -->
+	</div>
+
+	<!-- ABOUT -->
+	<section id="about">
+		<div class="title clip-small">ABOUT</div>
+		<div class="content col-both">
+			I am a final year student currently doing my master thesis at Blekinge Institute of Technology (BTH) in Karlskrona.
+		</div>
+	</section>
+
+	<!-- EXPERIENCE -->
+	<section id="experience">
+		<div class="title clip-small">EXPERIENCE</div>
+		<div class="content col1">
+			While my main experience is within C++, I am also quite comfortable with the below languages and technologies.
+			<ul class="list">
+				<li>C++</li>
+				<li>C</li>
+				<li>Vulkan</li>
+				<li>CUDA</li>
+				<li>OpenGL</li>
+				<li>Git</li>
 			</ul>
 		</div>
-	</div>
+		<div class="content col2">
+			I also have experience in the languages and technologies below, however they are not as strong as the aforementioned.
+			<ul class="list">
+				<li>Java</li>
+				<li>C#</li>
+				<li>Python</li>
+				<li>Lua</li>
+				<li>JavaScript</li>
+				<li>HTML/CSS</li>
+				<li>Godot (Game Engine)</li>
+			</ul>
+		</div>
+	</section>
 
-	<!-- TODO:
-		* Add a navBar when scrolling down
-		* Project pages
-		Fill in other stuff
-	-->
-
-	<!-- Active content -->
-	<div id="active-content"></div>
-
-	<!-- About -->
-	<div class="content">
-		<h1>About</h1>
-		Hello! I am Simon Nylén, a 23 year old currently studying the final year
-		in Master of Science in Game and Software Engineering at Blekinge Institute of Technology
-		(BTH) in Karlskrona.
-		<br>
-		For more information about me, make sure to checkout the projects section!
-		<br>
-		For even more information the résumé is also available in its respective section.
-	</div>
-
-	<!-- Projects -->
-	<div class="content">
-		<h1>Projects</h1>
-		<div class="card-list hide-scroll">
+	<!-- PROJECTS -->
+	<section id="projects">
+		<div class="title clip-small">PROJECTS</div>
+		<div class="content col-both">
+			The main way to gain experience and to continue learning is by doing.
+			Below you will find a subset of projects that I have worked on during both my studies and freetime.
+		</div>
+		<div class="card-list col-both">
 			<a class="card" href="projects/crazycanvas.html">
 				<img src="img/crazycanvas.png">
 				<div class="card-content">
@@ -83,41 +106,31 @@
 				</div>
 			</a>
 		</div>
-	</div>
+	</section>
 
-	<!-- CV -->
-	<div class="content">
-		<h1>Résumé</h1>
-		English résumé is <a href="img/resume.pdf">here</a>
-		<br>
-		Swedish résumé is <a href="img/resumeSV.pdf">here</a>
-	</div>
-
-	<!-- Contact -->
-	<div class="content">
-		<h1>Contact Information</h1>
-		I am most easily reached with email: <a href="mailto:simnylen@gmail.com">simnylen@gmail.com</a>
-		<br>
-		<a href="https://www.linkedin.com/in/simon-nyl%C3%A9n-158264161/">LinkedIn</a>
-		<br>
-		<a href="https://github.com/Ceanze">Github</a>
-	</div>
-
-	<!-- Posts -->
-	<div class="content">
-		<h1>Posts</h1>
-		<div class="card-list hide-scroll">
-			<a class="card card-no-image" href="posts/convert-cmake-to-premake.html">
-				<!-- <img src="img/crazycanvas.png"> -->
-				<div class="card-content">
-					<h2>Converting CMake to Premake for GLSLang</h2>
-					A short post about the process of converting from CMake to premake using GLSLang as a practical example
-					<div class="card-tags"><span>Vulkan</span> <span>CMake</span> <span>premake</span> <span>GLSLang</span></div>
-				</div>
-			</a>
+	<!-- RESUME -->
+	<!-- <section id="resume">
+		<div class="title clip-small">RÉSUMÉ</div>
+		<div class="content col-both">
+			If you want more information about me in a format wa
 		</div>
-	</div>
+	</section> -->
 
+	<!-- CONTACT -->
+	<section id="contact">
+		<div class="title clip-small">CONTACT</div>
+		<div class="content col1">
+			<a href="https://www.linkedin.com/in/simon-nyl%C3%A9n-158264161/">LinkedIn</a>
+			<br>
+			<a href="https://github.com/Ceanze">GitHub</a>
+			<br>
+			<a href="mailto:simnylen@gmail.com">E-mail</a>
+		</div>
+	</section>
+
+	<footer></footer>
+
+<!-- <script type="text/javascript" src="../background.js"></script> -->
 <script type="text/javascript" src="script.js"></script>
 </body>
 
