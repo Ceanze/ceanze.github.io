@@ -60,5 +60,13 @@ function main() {
             setNavBarColor();
         }
     });
+
+    document.getElementById("hamburger-icon").addEventListener("click", function() {
+        document.getElementById("nav-bar").classList.toggle("active");
+    });
+
+    document.querySelectorAll("#nav-bar a").forEach(n => n.addEventListener("click", function() {
+        document.getElementById("nav-bar").classList.remove("active");
+    }));
 }
 main();

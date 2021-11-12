@@ -74,6 +74,56 @@ a:hover {
 	color: var(--accent-color);
 }
 
+@media only screen and (max-width: 1200px) {
+
+	#nav-bar {
+		top: -100%;
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		z-index: 100;
+		width: 100%;
+		height: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		transition-timing-function: ease-out;
+		transition-duration: 0.2s;
+	}
+
+	.active {
+		top: 0 !important;
+	}
+
+	#nav-bar a {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 1.5rem;
+		text-decoration: none;
+		color: white;
+
+		cursor: pointer;
+		text-align: center;
+	}
+
+	#hamburger-icon {
+		z-index: 200;
+		background-image: url("/img/Hamburger_icon.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		filter: brightness(0) invert(1);
+		position: fixed;
+		width: 4vh;
+		height: 4vh;
+		top: 1rem;
+		left: 1rem;
+		cursor: pointer;
+	}
+}
+
+
 .active-nav-bar
 {
 	background-color: rgba(0, 0, 0, 0) !important;
@@ -275,11 +325,13 @@ section img {
 	grid-area: 1 / 2 / 2 / 6;
 	line-height: 1.5em;
 	position: relative;
+	font-size: 1rem;
 }
 
 .card h2
 {
 	font-weight: 700;
+	font-size: 1.5rem;
 }
 
 .card-tags
