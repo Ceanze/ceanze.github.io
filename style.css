@@ -245,10 +245,22 @@ section {
 	column-gap: 4rem;
 }
 
+section .tab1 { margin-left: 1.5em; }
+section .tab2 { margin-left: 3em; }
+section .tab3 { margin-left: 4.5em; }
+section .tab4 { margin-left: 6em; }
+
 section .title {
 	font-size: 4rem;
 	font-weight: 700;
 	grid-column: 1 / span 2;
+}
+
+section h1 {
+	font-weight: 900;
+	font-size: 2rem;
+	line-height: 1em;
+	color: var(--accent-color);
 }
 
 section .content {
@@ -288,6 +300,11 @@ section .col-justify-center {
 
 section img {
 	width: 100%;
+}
+
+section .content img {
+	width: 20rem;
+	clip-path: inset(1rem 2rem 1rem 2rem round 5rem);
 }
 
 .list {
