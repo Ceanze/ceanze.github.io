@@ -61,12 +61,14 @@ function main() {
         }
     });
 
-    document.getElementById("hamburger-icon").addEventListener("click", function() {
+    document.getElementById("nav-bar-icon").addEventListener("click", function() {
         document.getElementById("nav-bar").classList.toggle("active");
+        document.getElementById("nav-bar-icon").classList.toggle("open");
     });
 
     document.querySelectorAll("#nav-bar a").forEach(n => n.addEventListener("click", function() {
         document.getElementById("nav-bar").classList.remove("active");
+        document.getElementById("nav-bar-icon").classList.remove("open");
     }));
 }
 main();
