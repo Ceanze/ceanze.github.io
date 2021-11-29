@@ -295,7 +295,7 @@ section .col-center {
 }
 
 section .col-justify-center {
-	justify-self: center;;
+	justify-self: center;
 }
 
 section img {
@@ -313,8 +313,8 @@ section .content img {
 
 @media only screen and (max-width: 1200px) {
 	section {
-		padding-left: 20%;
-		padding-right: 20%;
+		padding-left: 10%;
+		padding-right: 10%;
 		padding-bottom: 15vh;
 
 		display: grid;
