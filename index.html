@@ -25,14 +25,19 @@
       transform-origin: 70% 70%;
     }
 
-    /* Base state: no animation */
     .animate-wave {
       animation: wave 1.8s ease-in-out 1;
     }
   </style>
 </head>
-<body class="bg-black text-white min-h-screen flex items-center justify-center">
-  <div class="space-y-6">
+<body class="relative min-h-screen flex items-center justify-center bg-gray-950 text-white overflow-hidden">
+  <!-- Purple Glow -->
+  <div class="absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"
+       style="top: 0%; left: -20%;"></div>
+  <div class="absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"
+       style="bottom: -15%; right: -15%;"></div>
+
+  <div class="space-y-6 z-10">
     <!-- Greeting -->
     <h1 class="text-8xl font-bold flex items-center gap-2">
       Hi!<span class="wave cursor-pointer">👋</span>
