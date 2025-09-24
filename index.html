@@ -5,167 +5,23 @@
 	<meta charset="utf-8">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
 </head>
-<body class="hide-scroll">
+<body>
 
-	<!-- NAV BAR -->
-	<div id="nav-bar-icon">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
+<div id="landing-page" class="prevent-select">
+	<div id="name">
+		<div id="first">SIMON</div>
+		<div id="last">NYLÉN</div>
 	</div>
-	<div id="nav-bar">
-		<a href="#about">About</a>
-		<a href="#experience">Experience</a>
-		<a href="#projects">Projects</a>
-		<!-- <a href="#resume">Résumé</a> -->
-		<a href="#contact">Contact</a>
+	<div id="menu">
+		<div id="about">About<div class="rect"></div></div>
+		<div id="experience">Experience<div class="rect"></div></div>
+		<div id="projects">Projects<div class="rect"></div></div>
+		<div id="contact">Contact<div class="rect"></div></div>
 	</div>
+</div>
 
-	<!-- COVER -->
-	<div class="cover">
-		<!-- <canvas></canvas> -->
-		<!-- <div class="cover-bottom-fade"></div> -->
-		<div class="cover-text-box">
-			<div class="cover-text clip">SIMON NYLÉN</div>
-			<div class="cover-sub-text">Game and Software Programmer</div>
-		</div>
-	</div>
-
-	<!-- ABOUT -->
-	<section id="about">
-		<div class="title clip-small">ABOUT</div>
-		<div class="content col-both">
-			<img src="img/me.JPG" /> <br>
-			Hi there! My name is <span class="clip">Simon Nylén</span> and I am a software programmer currently working at <span class="clip">HiQ</span> in Stockholm as a <span class="clip">C++ developer</span>.
-			Before I started working full-time with software development I pursued a <span class="clip">Master of Science in Game and Software Engineering</span> degree
-			at Blekinge Institute of Technology (BTH) in Karlskrona.
-			<br/> <br/>
-			I <span class="clip">love developing</span> and exploring all things programming and I am always open to <span class="clip">learn</span> new languages, concepts, and technologies.
-			Since I love games and how they work I find that area of programming especially exciting. The love of games guided me to the education I have and the hobby projects I work on.
-			<br/> <br/>
-			As a person I always strive to be <span class="clip">positive</span>, open to questions and trying to gain and spread knowledge within programming. I can successfully work independently and in larger teams as
-			I consistently take <span class="clip">responsibility</span> for my work and am comfortable to take on <span class="clip">new challenges</span>.
-		</div>
-	</section>
-
-	<!-- EXPERIENCE -->
-	<section id="experience">
-		<div class="title clip-small">EXPERIENCE</div>
-		<div class="content col-both">
-			<h1 class="clip">Work/education Experience</h1>
-			<span class="clip">HiQ Stockholm</span> - C++ Developer/Consultant <br> <span class="tab1">2021 -</span>
-			<br><br>
-			<span class="clip">Blekinge Institute of Technology</span> - Master of Science in Game and Software Engineering <br> <span class="tab1">2016 - 2021</span>
-			<!-- While my main experience is within C++, I am also quite comfortable with the below languages and technologies.
-			<ul class="list">
-				<li>C++</li>
-				<li>C</li>
-				<li>Vulkan</li>
-				<li>CUDA</li>
-				<li>OpenGL</li>
-				<li>Git</li>
-			</ul> -->
-		</div>
-		<div class="content col-both">
-			<h1 class="clip-small">Skills</h1>
-			<ul class="list">
-				<li>C++</li>
-				<li>Vulkan</li>
-				<li>Python</li>
-				<li>CUDA</li>
-				<li>OpenGL</li>
-				<li>Git</li>
-				<li>C</li>
-				<li>C#</li>
-				<li>Java</li>
-				<li>Lua</li>
-				<li>JavaScript</li>
-				<li>HTML/CSS</li>
-				<li>Scrum</li>
-			</ul>
-		</div>
-	</section>
-
-	<!-- PROJECTS -->
-	<section id="projects">
-		<div class="title clip-small">PROJECTS</div>
-		<div class="content col-both">
-			The main way to gain experience and to continue learning is by doing.
-			Below you will find a subset of projects that I have worked on during both my studies and freetime.
-		</div>
-		<div class="card-list col-both">
-			<a class="card" href="projects/crazycanvas.html">
-				<img src="img/crazycanvas.png">
-				<div class="card-content">
-					<h2>Crazy Canvas</h2>
-					A game made during a semester at BTH with 9 other students.
-					<div class="card-tags"><span>Scrum</span> <span>Vulkan</span> <span>Course</span></div>
-				</div>
-			</a>
-			<a class="card" href="projects/poly.html">
-				<img src="img/github.png">
-				<div class="card-content">
-					<h2>Poly</h2>
-					My personal Vulkan engine which I work on when I have some freetime.
-					<div class="card-tags"><span>Personal</span> <span>Vulkan</span></div>
-				</div>
-			</a>
-			<a class="card" href="projects/dronestrike.html">
-				<img src="img/github.png">
-				<div class="card-content">
-					<h2>Drone Strike</h2>
-					A game made during a half semester at BTH with 5 other students.
-					<div class="card-tags"><span>Scrum</span> <span>Vulkan</span> <span>Course</span></div>
-				</div>
-			</a>
-			<a class="card" href="https://github.com/Ceanze/ThreadDispatcher">
-				<img src="img/github.png">
-				<div class="card-content">
-					<h2>Thread Dispatcher</h2>
-					My take on a thread dispatcher made as a learning exercise for multithreading.
-					<div class="card-tags"><span>Personal</span> <span>Multithreading</span></div>
-				</div>
-			</a>
-			<a class="card" href="https://www.diva-portal.org/smash/record.jsf?pid=diva2:1572285">
-				<img src="img/thesis.png">
-				<div class="card-content">
-					<h2>Master Thesis</h2>
-					Real-time Snow Simulator using Iterative-relaxation and Boundary Handling
-					<div class="card-tags"><span>Master Thesis</span> <span>Paper</span></div>
-				</div>
-			</a>
-		</div>
-	</section>
-
-	<!-- RESUME -->
-	<!-- <section id="resume">
-		<div class="title clip-small">RÉSUMÉ</div>
-		<div class="content col-both">
-			If you want more information about me in a format wa
-		</div>
-	</section> -->
-
-	<!-- CONTACT -->
-	<section id="contact">
-		<div class="title clip-small">CONTACT</div>
-		<div class="content col1">
-			<a href="https://www.linkedin.com/in/simon-nyl%C3%A9n-158264161/">LinkedIn</a>
-			<br>
-			<a href="https://github.com/Ceanze">GitHub</a>
-			<br>
-			<a href="mailto:simnylen@gmail.com">E-mail</a>
-		</div>
-	</section>
-
-	<footer></footer>
-
-<!-- <script type="text/javascript" src="../background.js"></script> -->
 <script type="text/javascript" src="script.js"></script>
 </body>
-
-
 </html>
