@@ -28,14 +28,38 @@
     .animate-wave {
       animation: wave 1.8s ease-in-out 1;
     }
+
+  @keyframes drift1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    60% { transform: translate(150%, 40%) scale(1.1); }
+  }
+
+  @keyframes drift2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    40% { transform: translate(-100%, -30%) scale(1.4); }
+  }
+
+  .blob {
+    transition: transform 1s ease-in-out;
+  }
+
+  .blob1 {
+    top: 0%;
+    left: -20%;
+    animation: drift1 20s ease-in-out infinite;
+  }
+
+  .blob2 {
+    bottom: -15%;
+    right: -15%;
+    animation: drift2 15s ease-in-out infinite;
+  }
   </style>
 </head>
 <body class="relative min-h-screen flex items-center justify-center px-8 bg-gray-950 text-white overflow-hidden">
   <!-- Purple Glow -->
-  <div class="absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"
-       style="top: 0%; left: -20%;"></div>
-  <div class="absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"
-       style="bottom: -15%; right: -15%;"></div>
+<div class="blob blob1 absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"></div>
+<div class="blob blob2 absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"></div>
 
   <div class="space-y-6 z-10">
     <!-- Greeting -->
