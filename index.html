@@ -64,7 +64,7 @@
   <div class="space-y-6 z-10">
     <!-- Greeting -->
     <h1 class="text-8xl font-bold flex items-center gap-2">
-      Hi!<span class="wave cursor-pointer">👋</span>
+      Hi!<span class="wave cursor-pointer select-none">👋</span>
     </h1>
 
     <!-- Subtitle -->
@@ -115,6 +115,10 @@
 
     // Re-trigger on hover
     wave.addEventListener('mouseenter', () => {
+      wave.classList.add('animate-wave');
+    });
+
+    wave.addEventListener('click', () => {
       wave.classList.add('animate-wave');
     });
   </script>
