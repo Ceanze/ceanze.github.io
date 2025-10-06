@@ -54,16 +54,47 @@
     right: -15%;
     animation: drift2 15s ease-in-out infinite;
   }
+
+  .blob-parallax {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+  .blob-parallax > .blob {
+    position: absolute;
+    inset: 0;
+  }
+
+  .blob-parallax > .blob.blob1 {
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  .blob-parallax > .blob.blob2 {
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
   </style>
 </head>
 <body class="bg-gray-950 text-white font-[Montserrat]">
 
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <!-- blob 1 (parallax wrapper) -->
+    <div class="blob-parallax absolute -left-48 -top-24 w-96 h-96" data-speed="0.1">
+      <div class="blob blob1 w-full h-full bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- blob 2 (parallax wrapper) -->
+    <div class="blob-parallax absolute -right-48 -bottom-36 w-96 h-96" data-speed="0.05">
+      <div class="blob blob2 w-full h-full bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl"></div>
+    </div>
+  </div>
+
   <!-- Landing -->
   <div class="relative min-h-screen flex items-center justify-center px-8">
-      <!-- Purple Glow -->
-    <div class="blob blob1 absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"></div>
-    <div class="blob blob2 absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"></div>
-
     <div class="space-y-6 z-10">
       <!-- Greeting -->
       <h1 class="text-8xl font-semibold flex items-center gap-2">
@@ -246,6 +277,21 @@
     wave.addEventListener('click', () => {
       wave.classList.add('animate-wave');
     });
+
+  const parallaxEls = document.querySelectorAll('.blob-parallax');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && parallaxEls.length) {
+    const onScroll = () => {
+      const y = window.scrollY || window.pageYOffset;
+      parallaxEls.forEach((el) => {
+        const speed = parseFloat(el.dataset.speed) || 0.1;
+        el.style.transform = `translateY(${y * speed}px)`;
+      });
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
   </script>
 </body>
 </html>

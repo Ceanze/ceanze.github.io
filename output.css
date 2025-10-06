@@ -194,11 +194,32 @@
   }
 }
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+  .-top-24 {
+    top: calc(var(--spacing) * -24);
+  }
+  .-right-48 {
+    right: calc(var(--spacing) * -48);
+  }
+  .-bottom-36 {
+    bottom: calc(var(--spacing) * -36);
+  }
+  .-left-48 {
+    left: calc(var(--spacing) * -48);
   }
   .-z-10 {
     z-index: calc(10 * -1);
@@ -227,6 +248,9 @@
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
+  .h-full {
+    height: 100%;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -247,6 +271,9 @@
   }
   .w-96 {
     width: calc(var(--spacing) * 96);
+  }
+  .w-full {
+    width: 100%;
   }
   .max-w-2 {
     max-width: calc(var(--spacing) * 2);
@@ -333,6 +360,9 @@
   }
   .justify-self-center {
     justify-self: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
