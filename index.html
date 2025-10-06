@@ -4,7 +4,7 @@
     <title>Home | Simon Nylén</title>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,48 +56,173 @@
   }
   </style>
 </head>
-<body class="relative min-h-screen flex items-center justify-center px-8 bg-gray-950 text-white overflow-hidden">
-  <!-- Purple Glow -->
-<div class="blob blob1 absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"></div>
-<div class="blob blob2 absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"></div>
+<body class="bg-gray-950 text-white font-[Montserrat]">
 
-  <div class="space-y-6 z-10">
-    <!-- Greeting -->
-    <h1 class="text-8xl font-bold flex items-center gap-2">
-      Hi!<span class="wave cursor-pointer select-none">👋</span>
+  <!-- Landing -->
+  <div class="relative min-h-screen flex items-center justify-center px-8">
+      <!-- Purple Glow -->
+    <div class="blob blob1 absolute w-96 h-96 bg-gradient-to-tr from-purple-700 via-purple-800 to-indigo-900 opacity-30 rounded-full blur-3xl -z-10"></div>
+    <div class="blob blob2 absolute w-96 h-96 bg-gradient-to-br from-purple-700 via-purple-800 to-indigo-900 opacity-20 rounded-full blur-3xl -z-10"></div>
+
+    <div class="space-y-6 z-10">
+      <!-- Greeting -->
+      <h1 class="text-8xl font-semibold flex items-center gap-2">
+        Hi!<span class="wave cursor-pointer select-none">👋</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <div class="text-4xl">
+        <p>I'm Simon,</p>
+        <p>Software Engineer,</p>
+        <p>
+          Currently working at
+          <span class="text-orange-500 font-semibold">King</span>
+        </p>
+      </div>
+
+      <!-- Icons -->
+      <div class="flex items-center justify-center gap-6 text-gray-400">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/simonnylen/" class="opacity-70 hover:opacity-100 duration-200" aria-label="LinkedIn">
+          <img src="img/linkedin.png" class="w-8 h-8 fill-current"/>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Ceanze" class="opacity-70 hover:opacity-100 duration-200" aria-label="GitHub">
+          <img src="img/github.png" class="w-8 h-8 fill-current"/>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:simnylen@gmail.com" class="opacity-70 hover:opacity-100 duration-200" aria-label="Email">
+          <img src="img/mail.png" class="w-8 h-8 fill-current"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <!-- <div class="relative min-h-screen flex justify-start px-8 items-center flex-col"> -->
+    <!-- Title -->
+    <!-- <h1 class="text-8xl font-semibold pt-16">
+      About
+    </h1>
+  </div> -->
+
+  <!-- Experience -->
+  <div class="relative min-h-screen flex justify-start px-8 items-center flex-col">
+    <!-- Title -->
+    <h1 class="text-8xl font-semibold pt-16">
+      Experience
     </h1>
 
-    <!-- Subtitle -->
-    <div class="text-4xl">
-      <p>I'm Simon,</p>
-      <p>Software Engineer,</p>
-      <p>
-        Currently working at
-        <span class="text-orange-500 font-semibold">King</span>
-      </p>
+    <!-- List -->
+    <div class="flex items-stretch justify-center pt-32 flex-col gap-4">
+      <!-- King -->
+      <a href="https://www.king.com/" class="flex items-start justify-start gap-8 hover:bg-[#3131311f] hover:cursor-pointer p-8 rounded-4xl">
+        <!-- Logo -->
+        <div class="self-center justify-self-center">
+          <img class="w-36 object-contain min-w-24 opacity-70 hover:opacity-100 duration-200" src="img/king_white.png"/>
+        </div>
+
+        <!-- Text -->
+        <div class="flex items-start justify-start flex-col gap-1">
+          <h2 class="text-5xl font-semibold pb-2">
+            King
+          </h2>
+          <h3 class="text-2xl font-normal">
+            2023 - Now <span class="px-4">Software Enginer</span>
+          </h3>
+          <h3 class="text-2xl font-normal">
+            2022 - 2023 <span class="px-4">Junior Software Engineer</span>
+          </h3>
+        </div>
+      </a>
+
+      <!-- HiQ -->
+      <a href="https://hiq.se/" class="flex items-start justify-start gap-8 hover:bg-[#3131311f] p-8 rounded-4xl">
+        <!-- Logo -->
+        <div class="self-center justify-self-center">
+          <img class="w-36 object-contain min-w-24 opacity-70 hover:opacity-100 duration-200" src="img/hiq_white.png"/>
+        </div>
+
+        <!-- Text -->
+        <div class="flex items-start justify-start flex-col gap-1">
+          <h2 class="text-5xl font-semibold pb-2">
+            HiQ
+          </h2>
+          <h3 class="text-2xl font-normal">
+            2021 - 2022 <span class="px-4">Junior Software Developer</span>
+          </h3>
+        </div>
+      </a>
+
+      <!-- BTH -->
+      <a href="https://www.bth.se/" class="flex items-start justify-start gap-8 hover:bg-[#3131311f] p-8 rounded-4xl">
+        <!-- Logo -->
+        <div class="self-center justify-self-center">
+          <img class="w-36 object-contain min-w-24 opacity-70 hover:opacity-100 duration-200" src="img/bth.png"/>
+        </div>
+
+        <!-- Text -->
+        <div class="flex items-start justify-start flex-col gap-1">
+          <h2 class="text-5xl font-semibold pb-2">
+            Blekinge Tekniska Högskola
+          </h2>
+          <h3 class="text-2xl font-normal">
+            2016 - 2021 <span class="px-4">Student in Master of Science in Game and Software Engineering</span>
+          </h3>
+        </div>
+      </a>
     </div>
+  </div>
 
-    <!-- Icons -->
-    <div class="flex items-center justify-center gap-6 text-gray-400">
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/simonnylen/" class="hover:text-white" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8.5 8h3.7v2.2h.1c.5-.9 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-7.7c0-1.8 0-4.1-2.5-4.1s-2.9 1.9-2.9 4V24h-4V8z"/>
-        </svg>
+  <!-- Projects -->
+  <div class="relative min-h-screen flex justify-start px-8 lg:mx-48 items-center flex-col">
+    <!-- Title -->
+    <h1 class="text-8xl font-semibold pt-16">
+      Projects
+    </h1>
+
+    <!-- List -->
+    <div class="flex items-stretch justify-center pt-32 flex-col gap-16">
+      <!-- Poly -->
+      <a href="https://github.com/Ceanze/Poly" class="flex items-start justify-start gap-8 hover:bg-[#3131311f] hover:cursor-pointer p-8 rounded-4xl">
+        <!-- Logo -->
+        <div class="self-center justify-self-center">
+          <img class="w-36 object-contain min-w-24 opacity-70 hover:opacity-100 duration-200" src="img/github.png"/>
+        </div>
+
+        <!-- Text -->
+        <div class="flex items-start justify-start flex-col gap-1">
+          <h2 class="text-5xl font-semibold pb-2">
+            Poly - Game Engine
+          </h2>
+          <div class="">
+            Vulkan game engine written from scratch by me. Project is a constant work
+            in progress. Current main features a Render Graph, PBR rendering, and
+            shader reflection.
+          </div>
+        </div>
       </a>
 
-      <!-- GitHub -->
-      <a href="https://github.com/Ceanze" class="hover:text-white" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 1.6 2.5 2.1.5-.8 1-1.2 1.4-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.2-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8.9.8 1.8v2.7c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.73 18.27.5 12 .5z"/>
-        </svg>
-      </a>
+      <!-- Crazy Canvas -->
+      <a href="https://github.com/IbexOmega/CrazyCanvas" class="flex items-start justify-start gap-8 hover:bg-[#3131311f] hover:cursor-pointer p-8 rounded-4xl">
+        <!-- Logo -->
+        <div class="self-center justify-self-center">
+          <img class="w-48 object-contain min-w-24 opacity-70 hover:opacity-100 duration-200" src="img/crazycanvas.png"/>
+        </div>
 
-      <!-- Email -->
-      <a href="mailto:simnylen@gmail.com" class="hover:text-white" aria-label="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-          <path d="M12 13.1 0 6V4l12 7.1L24 4v2l-12 7.1zM0 8l12 7.1L24 8v12H0V8z"/>
-        </svg>
+        <!-- Text -->
+        <div class="flex items-start justify-start flex-col gap-1">
+          <h2 class="text-5xl font-semibold pb-2">
+            Crazy Canvas - Game
+          </h2>
+          <div class="">
+            Game made during the last year at university in 2020. The game
+            features ray-tracing, vertex painting, online multiplayer, and much more. All made
+            with a custom Vulkan engine.
+          </div>
+        </div>
       </a>
     </div>
   </div>
