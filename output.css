@@ -753,6 +753,9 @@
   .text-gray-400 {
     color: var(--color-gray-400);
   }
+  .text-neutral-300 {
+    color: var(--color-neutral-300);
+  }
   .text-orange-500 {
     color: var(--color-orange-500);
   }
